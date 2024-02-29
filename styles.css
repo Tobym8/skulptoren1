@@ -1,0 +1,407 @@
+/*----------------------GENERELL STYLING FÖR HELA WEBBSIDAN-----------------------*/
+body {
+        background-color: #000;
+        display: flex; 
+        flex-direction: column;
+        color: #fff;
+        height: 100vh;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+main {
+    width: 100%;
+    margin: auto;
+    margin: 0;
+}
+
+/* HEADER: Header */
+header {
+ position: relative;
+}
+
+header a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-family: "roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18pt;
+}
+
+header a::before {
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background: #fff;
+	transition: .3s;
+}
+
+header a:hover::before {
+	width: 90%;
+}
+
+
+/* HEADER: Navbar */
+.navbar {
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logotyp */
+.navbar .logo {
+    list-style-type: none;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.navbar .logo a:hover::before {
+    width:0%;
+}
+
+.navbar .logo img {
+    width: 60px;
+}
+
+
+.navbar .links {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    list-style-type: none;
+    padding-right: 100px;
+}
+
+.navbar .toggle_btn {
+    display: none;
+    font-size:60px;
+    padding-right: 10px;
+}
+
+/* Dropdown menu */
+.dropdown_menu {
+    display: none;
+    position: fixed;
+    top: 100px;
+    height: 0;
+    width: 100%;
+    background: #000;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+}
+
+.dropdown_menu.open {
+   height: auto;
+}
+
+.dropdown_menu li {
+    padding: 15px;
+    list-style-type: none;
+    font-size: 50px;
+}
+
+/* FOOTER */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 15vh;
+    background-color: black;
+}
+.socials {
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsiv design */
+@media(max-width: 992px) {
+    .navbar .links {
+        display: none;
+    }
+
+   .navbar .toggle_btn {
+        display: block;
+    }
+
+    .dropdown_menu {
+        display: block;
+
+    }
+}
+
+@media(max-width: 576px) {
+    .dropdown_menu {
+    left: 30px;
+    width: unset;
+    }
+}
+
+/*------------------------------STYLING AV FÖRSTA-SIDA-----------------------------*/
+.background {
+    background-image: url(Background.webp);
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.rubrikindex {
+    font-size: 10vh;
+}
+
+.countdown {
+    font-size: 20vh;
+    word-spacing: 2.5vh;
+}
+
+.dtms {
+    word-spacing: 18vh;
+}
+
+/*------------------------------STYLING AV STORY-SIDA-----------------------------*/
+
+
+.layout {
+    justify-content: center;
+    margin-top: 50px;
+    display: grid;
+	grid-template-columns: auto auto auto;
+    grid-template-areas: 
+    'story story photo1'
+    'photo2 chapter1 chapter1'
+    'chapter2 chapter2 photo3'
+    'photo4 chapter3 chapter3';
+	grid-gap: 5px;
+	padding: 5px;
+    padding-left: 15vw;
+    padding-right: 15vw;
+}
+
+@media(max-width: 992px) {
+    .layout {
+        display: block;
+    }
+}
+
+.story {
+   grid-area: story;
+}
+
+.photo1 {
+   grid-area: photo1;
+}
+
+.chapter1 {
+  grid-area: chapter1;
+}
+
+.photo2 {
+   grid-area: photo2;
+}
+
+.chapter2 {
+    grid-area: chapter2;
+}
+
+.photo3 {
+    grid-area: photo3;
+}
+
+.chapter3 {
+    grid-area: chapter3;
+}
+
+.photo4 {
+  grid-area: photo4;
+}
+
+
+
+/*------------------------------STYLING AV BILJETT-SIDA-----------------------------*/
+
+.body-biljetter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media(max-width: 992px) {
+    .body-biljetter {
+        font-size: 2vh;
+        padding-top: 200px;
+    }
+}
+
+.seat {
+    background-color: #444451;
+    height: 12px;
+    width: 15px;
+    margin: 3px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+@media(max-width: 992px) {
+    .seat {
+        width: 1.5vh;
+        height: 1.5vh;
+        margin: 6px;
+        border-top-left-radius: 1.5vh;
+        border-top-right-radius: 1.5vh;
+    }
+}
+.row {
+    display: flex;
+}
+
+.rubrik {
+    font-size: 32pt;
+}
+
+@media(max-width: 992px) {
+    .rubrik {
+        font-size: 64pt;
+    }
+}
+
+
+.seat.selected {
+    background-color: #06bfff;
+}
+
+.seat.occupied {
+    background-color: #fff;
+}
+
+.seat:nth-of-type(2) {
+    margin-right: 18px;
+}
+
+@media(max-width: 992px) {
+    .seat:nth-of-type(2) {
+     margin-right: 4vh;
+}
+}
+
+.seat:nth-last-of-type(2) {
+    margin-left: 18px;
+}
+
+@media(max-width: 992px) {
+    .seat:nth-last-of-type(2) {
+      margin-left: 4vh;
+    }
+}
+
+.seat:not(.occupied):hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.showcase .seat:not(.occupied):hover {
+    cursor: default;
+    transform: scale(1);
+}
+
+.showcase {
+    background-color: #848484;
+    padding: 5px 10px;
+    border-radius: 5px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.showcase li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+.showcase li small {
+    margin-left: 10px;
+}
+
+.screen {
+    background-color: #fff;
+    height: 70px;
+    width: 100%;
+    margin: 15px 0;
+    transform: rotatex(-45deg);
+    box-shadow: 0 3px 10px;
+}
+
+@media(max-width: 992px) {
+    .screen {
+        height: 140px;
+        width: 100%;
+        margin: 15px 0;
+    }
+}
+
+.containerseats {
+    perspective: 1000px;
+    margin-bottom: 30px;
+}
+
+/*------------------------------STYLING AV KONTAKT-SIDA-----------------------------*/
+
+/*generella bestämelser för kontakta oss*/
+
+/*centrering av rubrik och text*/
+.kontakt-content {
+	text-align: center;
+}
+.kontakt-content h2 {
+	font-size: 36px;
+	font-weight: 500;
+	color: #fff;
+}
+.kontakt-content p {
+	font-weight: 300;
+	color: #fff;
+}
+/*container för allt innehåll*/
+.kontakt-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 40px;
+}
+.kontaktinfo {
+	display: flex;
+	flex-direction: column;	
+}
+
+.box {
+	position: relative;
+	padding: 20px 0; /*padding för att få snyggt mellanrum*/
+	display: flex;
+}
+/*ikoner för kontaktmedel (skapade i illustrator)*/
+.icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 22px;
+}
+/*generella bestämelser för text*/
+.kontakttext {
+	display: flex;
+	margin-left: 20px;
+	font-size: 18px;
+	color: #fff;
+	flex-direction: column; /*snygg column*/
+}
