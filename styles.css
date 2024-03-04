@@ -265,7 +265,6 @@ footer {
 	grid-template-columns: auto auto auto;
     grid-template-areas: 
     'story story photo1'
-    'line1 line1 line1'
     'photo2 chapter1 chapter1'
     'chapter2 chapter2 photo3'
     'photo4 chapter3 chapter3';
@@ -288,12 +287,6 @@ footer {
 
 .photo1 {
    grid-area: photo1;
-}
-
-.line1 {
-    grid-area: line1;
-    padding-left: 100px;
-    padding-top: 100px;
 }
 
 .chapter1 {
@@ -457,7 +450,7 @@ footer {
 
 .screen {
     background-color: #fff;
-    height: 70px;
+    height: 90px;
     width: 100%;
     margin: 15px 0;
     transform: rotatex(-45deg);
