@@ -1,5 +1,7 @@
 /*----------------------GENERELL STYLING FÖR HELA WEBBSIDAN-----------------------*/
 body {
+        margin: 0;
+        padding: 0;
         background-color: #000;
         display: flex; 
         flex-direction: column;
@@ -99,6 +101,7 @@ header a:hover::before {
 
 .dropdown_menu.open {
    height: auto;
+   z-index: 5;
 }
 
 .dropdown_menu li {
@@ -107,21 +110,58 @@ header a:hover::before {
     font-size: 50px;
 }
 
+.button1 {
+    position: relative;
+    padding: 10px 25px;
+    font-size: 18pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fff;
+    background-color: #000;
+    border-radius: 25px;
+    border: none;
+
+}
+
+.button1 a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.button1 a::before {
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: 28px;
+	width: 0;
+	height: 2px;
+	background: #fff;
+	transition: .3s;
+}
+
+.button1 a:hover::before {
+	width: 70%;
+}
+
 /* FOOTER */
 footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 15vh;
     background-color: black;
+    z-index: 2; 
+    width: 100%;
+    bottom: 0;
+    position: relative;
+    margin: auto;
 }
 .socials {
     justify-content: center;
     align-items: center;
+    
 }
 
-/* Responsiv design */
-@media(max-width: 992px) {
+/* Responsiv design för nav */
+@media(max-width: 1200px) {
     .navbar .links {
         display: none;
     }
@@ -136,10 +176,10 @@ footer {
     }
 }
 
-@media(max-width: 576px) {
+@media(max-width: 992px) {
     .dropdown_menu {
-    left: 30px;
-    width: unset;
+    display: block;
+    width: 100%;
     }
 }
 
@@ -148,27 +188,75 @@ footer {
     background-image: url(Background.webp);
     background-size: cover;
     background-position: center center;
-    height: 100vh;
     align-items: center;
     justify-content: center;
     text-align: center;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 2;
 }
 
+
+
 .rubrikindex {
-    font-size: 10vh;
+    font-size: 72pt;
+    font-family: Sinete;
 }
 
 .countdown {
-    font-size: 20vh;
-    word-spacing: 2.5vh;
+    font-size: 120pt;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
 }
 
 .dtms {
-    word-spacing: 18vh;
+    word-spacing: 190px;
+    font-size: 12pt;
+}
+
+.buttonindex {
+    padding-top: 80px;
+    color:#fff;
+    
+}
+
+
+@media(max-width: 1200px) {
+    .rubrikindex {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        text-align: center;
+        font-size: 64pt;
+        padding-top: 15vw;
+    }
+    .countdown {
+        font-size: 100pt;
+    }
+
+    .buttonindex {
+        padding-top: 120px;
+    }
+}
+
+@media(max-width: 992px) {
+    .rubrikindex {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        text-align: center;
+        font-size: 64pt;
+        padding-top: 45vw;
+    }
+    .dtms {
+        word-spacing: 180px;
+    }
 }
 
 /*------------------------------STYLING AV STORY-SIDA-----------------------------*/
-
 
 .layout {
     justify-content: center;
@@ -177,6 +265,7 @@ footer {
 	grid-template-columns: auto auto auto;
     grid-template-areas: 
     'story story photo1'
+    'line1 line1 line1'
     'photo2 chapter1 chapter1'
     'chapter2 chapter2 photo3'
     'photo4 chapter3 chapter3';
@@ -194,51 +283,83 @@ footer {
 
 .story {
    grid-area: story;
+   padding-top: 100px;
 }
 
 .photo1 {
    grid-area: photo1;
 }
 
+.line1 {
+    grid-area: line1;
+    padding-left: 100px;
+    padding-top: 100px;
+}
+
 .chapter1 {
   grid-area: chapter1;
+  padding-top: 220px;
 }
 
 .photo2 {
    grid-area: photo2;
+   padding-top: 190px;
 }
 
 .chapter2 {
     grid-area: chapter2;
+    padding-top: 80px;
 }
 
 .photo3 {
     grid-area: photo3;
+    padding-top: 50px;
 }
 
 .chapter3 {
     grid-area: chapter3;
+    padding-top: 130px;
 }
 
 .photo4 {
   grid-area: photo4;
+  padding-top: 100px;
 }
 
-
+.buttonstory {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+}
 
 /*------------------------------STYLING AV BILJETT-SIDA-----------------------------*/
 
 .body-biljetter {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background: rgb(147,31,31);
+    background: linear-gradient(180deg, rgba(147,31,31,1) 0%, rgba(0,0,0,1) 5%);
+}
+.body-biljetter::after {
+    content: "";
+    position: absolute;
+    padding-bottom: 30px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 6.1%;
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(147,31,31,1) 100%);
 }
 
 @media(max-width: 992px) {
     .body-biljetter {
         font-size: 2vh;
-        padding-top: 200px;
     }
 }
 
@@ -265,7 +386,8 @@ footer {
 }
 
 .rubrik {
-    font-size: 32pt;
+    font-size: 48pt;
+    font-family: Sinete;
 }
 
 @media(max-width: 992px) {
@@ -314,12 +436,12 @@ footer {
 }
 
 .showcase {
-    background-color: #848484;
-    padding: 5px 10px;
-    border-radius: 5px;
-    list-style-type: none;
     display: flex;
     justify-content: space-between;
+    background-color: #848484;
+    padding: 5px 10px;
+    border-radius: 50px;
+    list-style-type: none;
 }
 
 .showcase li {
@@ -360,11 +482,38 @@ footer {
 /*generella bestämelser för kontakta oss*/
 
 /*centrering av rubrik och text*/
+.kontakta-oss {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
 .kontakt-content {
 	text-align: center;
+    width: 100%;
+    height: 100%;
+    background: rgb(147,31,31);
+    background: linear-gradient(180deg, rgba(147,31,31,1) 0%, rgba(0,0,0,1) 23%);
 }
+
+.kontakt-content::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(147,31,31,1) 100%);
+    z-index: 1;
+}
+
 .kontakt-content h2 {
-	font-size: 36px;
+    justify-content: center;
+	font-size: 48px;
 	font-weight: 500;
 	color: #fff;
 }
@@ -374,19 +523,15 @@ footer {
 }
 /*container för allt innehåll*/
 .kontakt-container {
-	width: 100%;
-	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-top: 40px;
 }
 .kontaktinfo {
-	display: flex;
-	flex-direction: column;	
+	flex-direction: column;
+    padding-bottom: 80px;	
 }
 
 .box {
-	position: relative;
 	padding: 20px 0; /*padding för att få snyggt mellanrum*/
 	display: flex;
 }
@@ -399,9 +544,9 @@ footer {
 }
 /*generella bestämelser för text*/
 .kontakttext {
-	display: flex;
+    display: flex;
+    flex-direction: column;
 	margin-left: 20px;
 	font-size: 18px;
 	color: #fff;
-	flex-direction: column; /*snygg column*/
 }
