@@ -20,7 +20,7 @@ function updateCountdown() {
     const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
 
     // Skapa textsträngen för nedräkningen
-    const countdownText = `${days} ${hours} ${minutes} ${seconds}`;
+    const countdownText = `${days} : ${hours} : ${minutes} : ${seconds}`;
     
 
     // Uppdatera elementet med nedräkningen
