@@ -110,6 +110,7 @@ header a:hover::before {
     font-size: 50px;
 }
 
+/* Knapp */
 .button1 {
     position: relative;
     padding: 10px 25px;
@@ -142,25 +143,79 @@ header a:hover::before {
 	width: 70%;
 }
 
-/* FOOTER */
+/* Footer */
 footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: black;
-    z-index: 2; 
-    width: 100%;
-    bottom: 0;
-    position: relative;
-    margin: auto;
-}
-.socials {
-    justify-content: center;
-    align-items: center;
-    
+  background-color: #000;
 }
 
-/* Responsiv design för nav */
+.footercontainer {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 70px 30px 20px;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+}
+
+.socials img {
+    padding: 10px;
+    margin: 5px;
+    justify-content: center;
+}
+
+.footernav {
+    margin: 20px 0;
+}
+
+.footernav ul {
+    display: flex;
+    justify-content: center;
+}
+.footernav li{
+    list-style-type: none;     
+}
+.footernav ul li a{
+    color: #fff;
+    margin: 50px;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.footernav a{
+    position: relative;
+}
+
+.footernav a::before {
+    content: '';
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background: #fff;
+	transition: .3s;
+}
+
+.footernav a:hover::before {
+    width: 90%;
+}
+
+.footerbottom {
+    background-color: #000;
+    padding: 30px;
+    text-align: center;
+}
+
+.designer {
+    opacity:0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+/* Responsiv design för nav och footer */
 @media(max-width: 1200px) {
     .navbar .links {
         display: none;
@@ -180,6 +235,16 @@ footer {
     .dropdown_menu {
     display: block;
     width: 100%;
+    }
+
+    .footernav ul {
+        flex-direction: column;
+    }
+
+    .footernav ul li {
+        width: 93%;
+       text-align: center;
+        margin: 10px;
     }
 }
 
@@ -212,6 +277,8 @@ footer {
     text-align: center;
 }
 
+/* Dagar timmar minuter sekunder */
+
 .dtms {
     word-spacing: 190px;
     font-size: 12pt;
@@ -220,9 +287,12 @@ footer {
 .buttonindex {
     padding-top: 80px;
     color:#fff;
+    justify-content: center;
+    align-items: center;
     
 }
 
+/*Responsiv design för indexsida */
 
 @media(max-width: 1200px) {
     .rubrikindex {
@@ -326,6 +396,8 @@ footer {
   padding-top: 100px;
 }
 
+/* Knapp */
+
 .buttonstory {
     justify-content: center;
     align-items: center;
@@ -334,6 +406,8 @@ footer {
 }
 
 /*------------------------------STYLING AV BILJETT-SIDA-----------------------------*/
+
+/* Gradient */
 
 .body-biljetter {
     position: relative;
@@ -357,12 +431,6 @@ footer {
     background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(147,31,31,1) 100%);
 }
 
-@media(max-width: 992px) {
-    .body-biljetter {
-        font-size: 2vh;
-    }
-}
-
 .seat {
     background-color: #444451;
     height: 12px;
@@ -372,15 +440,6 @@ footer {
     border-top-right-radius: 10px;
 }
 
-@media(max-width: 992px) {
-    .seat {
-        width: 1.5vh;
-        height: 1.5vh;
-        margin: 6px;
-        border-top-left-radius: 1.5vh;
-        border-top-right-radius: 1.5vh;
-    }
-}
 .row {
     display: flex;
 }
@@ -389,13 +448,6 @@ footer {
     font-size: 48pt;
     font-family: Sinete;
 }
-
-@media(max-width: 992px) {
-    .rubrik {
-        font-size: 64pt;
-    }
-}
-
 
 .seat.selected {
     background-color: #06bfff;
@@ -409,20 +461,8 @@ footer {
     margin-right: 18px;
 }
 
-@media(max-width: 992px) {
-    .seat:nth-of-type(2) {
-     margin-right: 4vh;
-}
-}
-
 .seat:nth-last-of-type(2) {
     margin-left: 18px;
-}
-
-@media(max-width: 992px) {
-    .seat:nth-last-of-type(2) {
-      margin-left: 4vh;
-    }
 }
 
 .seat:not(.occupied):hover {
@@ -464,14 +504,6 @@ footer {
     box-shadow: 0 3px 10px;
 }
 
-@media(max-width: 992px) {
-    .screen {
-        height: 140px;
-        width: 100%;
-        margin: 15px 0;
-    }
-}
-
 .containerseats {
     perspective: 1000px;
     margin-bottom: 30px;
@@ -481,11 +513,38 @@ footer {
     font-size: 12pt;
 }
 
+/* Responsiv design för biljettbokning */
+
+@media(max-width: 992px) {
+    .body-biljetter {
+        font-size: 2vh;
+    }
+    .seat {
+        width: 1.5vh;
+        height: 1.5vh;
+        margin: 6px;
+        border-top-left-radius: 1.5vh;
+        border-top-right-radius: 1.5vh;
+    }
+    .rubrik {
+        font-size: 64pt;
+    }
+    .seat:nth-of-type(2) {
+        margin-right: 4vh;
+    }
+    .seat:nth-last-of-type(2) {
+        margin-left: 4vh;
+    }
+    .screen {
+        height: 140px;
+        width: 100%;
+        margin: 15px 0;
+    }
+}
+
 /*------------------------------STYLING AV KONTAKT-SIDA-----------------------------*/
 
-/*generella bestämelser för kontakta oss*/
-
-/*centrering av rubrik och text*/
+/*Centrering av rubrik och text*/
 .kontakta-oss {
   position: relative;
   display: flex;
@@ -525,28 +584,29 @@ footer {
 	font-weight: 300;
 	color: #fff;
 }
-/*container för allt innehåll*/
+
 .kontakt-container {
 	justify-content: center;
 	align-items: center;
 }
 .kontaktinfo {
 	flex-direction: column;
-    padding-bottom: 80px;	
+    justify-content: center;
+    align-items: center;	
 }
 
 .box {
 	padding: 20px 0; /*padding för att få snyggt mellanrum*/
 	display: flex;
 }
-/*ikoner för kontaktmedel (skapade i illustrator)*/
+/* Ikoner för kontaktmedel */
 .icon {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	font-size: 22px;
 }
-/*generella bestämelser för text*/
+/* Generella bestämelser för text */
 .kontakttext {
     display: flex;
     flex-direction: column;
