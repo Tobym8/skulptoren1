@@ -6,8 +6,9 @@ body {
         display: flex; 
         flex-direction: column;
         color: #fff;
-        height: 100vh;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-family: "roboto", sans-serif;
+        font-weight: 700;
+        font-style: normal;
 }
 
 main {
@@ -18,7 +19,7 @@ main {
 
 /* HEADER: Header */
 header {
- position: relative;
+    position: relative;
 }
 
 header a {
@@ -43,24 +44,23 @@ header a::before {
 }
 
 header a:hover::before {
-	width: 90%;
+	width: 100%;
 }
-
 
 /* HEADER: Navbar */
 .navbar {
     width: 100%;
-    height: 100px;
+    height: 130px;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-/* Logotyp */
+/* HEADER: Navbar: Skulptören logotyp */
 .navbar .logo {
     list-style-type: none;
-    padding-left: 20px;
+    padding-left: 32px;
     padding-top: 10px;
 }
 
@@ -69,10 +69,10 @@ header a:hover::before {
 }
 
 .navbar .logo img {
-    width: 60px;
+    width: 70px;
 }
 
-
+/* HEADER: Navbar: Relativa länkar till de andra sidorna */
 .navbar .links {
     display: flex;
     align-items: center;
@@ -81,46 +81,47 @@ header a:hover::before {
     padding-right: 100px;
 }
 
-.navbar .toggle_btn {
+.navbar .toggle_btn { /* Förklaring */
     display: none;
     font-size:60px;
-    padding-right: 10px;
+    padding-right: 32px;
 }
 
-/* Dropdown menu */
-.dropdown_menu {
+/* HEADER: Navbar: Dropdown meny */
+.dropdown_menu { /* Menyn blir till en dropdownmeny när skärmstorleken minskas */
     display: none;
     position: fixed;
     top: 100px;
     height: 0;
     width: 100%;
     background: #000;
-    overflow: hidden;
-    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+    overflow: hidden; /* Förklaring */
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275) /* Förklaring */
 }
 
-.dropdown_menu.open {
+.dropdown_menu.open { /* Förklaring */
    height: auto;
    z-index: 5;
 }
 
-.dropdown_menu li {
+.dropdown_menu li { /* Styling av länkarna */
     padding: 15px;
     list-style-type: none;
     font-size: 50px;
 }
 
-/* Knapp */
+/* HEADER: Navbar: Knapp "Till biljetter */
 .button1 {
     position: relative;
     padding: 10px 25px;
     font-size: 18pt;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     color: #fff;
     background-color: #000;
     border-radius: 25px;
     border: none;
-
 }
 
 .button1 a {
@@ -131,7 +132,7 @@ header a:hover::before {
 .button1 a::before {
 	content: '';
 	position: absolute;
-	top: 100%;
+	top: 80%;
 	left: 28px;
 	width: 0;
 	height: 2px;
@@ -143,42 +144,62 @@ header a:hover::before {
 	width: 70%;
 }
 
-/* Footer */
+/* FOOTER */
 footer {
   background-color: #000;
 }
 
-.footercontainer {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 70px 30px 20px;
+/* FOOTER: Stor container för socials + länkar */
+.bigfootercontainer {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 'norcopiapictures footernav socials'
 }
 
+/* FOOTER: Norcopia pictures */
+.norcopiapictures {
+    grid-area: norcopiapictures;
+    margin-left: 170px;
+    margin-top: 60px;
+}
+
+.norcopiapictures img {
+    width: 40%;
+    height: auto;
+}
+
+/* FOOTER: Liten container för socials inom den stora containern */
 .socials {
-    display: flex;
-    justify-content: center;
+    grid-area: socials;
+    margin-left: 170px;
+    margin-top: 87px;
 }
 
 .socials img {
-    padding: 10px;
-    margin: 5px;
-    justify-content: center;
+    width: 40px;
+    height: auto;
 }
 
+/* FOOTER: Liten container för länkar inom den stora containern */
 .footernav {
-    margin: 20px 0;
+    grid-area: footernav;
+    margin-top: 80px;
 }
 
 .footernav ul {
     display: flex;
     justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
 }
+
 .footernav li{
-    list-style-type: none;     
+    list-style-type: none;   
 }
+
 .footernav ul li a{
     color: #fff;
-    margin: 50px;
     text-decoration: none;
     font-size: 1.2em;
 }
@@ -189,113 +210,154 @@ footer {
 
 .footernav a::before {
     content: '';
-	position: absolute;
+	position: absolute; 
 	top: 100%;
 	left: 0;
 	width: 0;
 	height: 2px;
-	background: #fff;
+	background: #ffffff;
 	transition: .3s;
 }
 
 .footernav a:hover::before {
-    width: 90%;
+    width: 100%;
 }
 
-.footerbottom {
-    background-color: #000;
+/* FOOTER: Copyright */
+.smallfootercontainer {
     padding: 30px;
     text-align: center;
 }
 
+/* FOOTER: Copyright: Text */
+.copyright-text {
+    font-size: 0.8em;
+}
+
+/* FOOTER: Copyright: Namn */
 .designer {
+    font-size: 0.8em;
     opacity:0.7;
-    text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 400;
     margin: 0px 5px;
 }
-/* Responsiv design för nav och footer */
-@media(max-width: 1200px) {
+
+/* Responsiv design för navbar och footer */
+@media (max-width: 1200px) {
     .navbar .links {
         display: none;
     }
 
-   .navbar .toggle_btn {
+    .navbar .toggle_btn {
         display: block;
     }
 
     .dropdown_menu {
         display: block;
-
     }
 }
 
-@media(max-width: 992px) {
+@media (max-width: 992px) {
     .dropdown_menu {
-    display: block;
-    width: 100%;
-    }
-
-    .footernav ul {
-        flex-direction: column;
+        display: block;
+        width: 100%;
     }
 
     .footernav ul li {
         width: 93%;
-       text-align: center;
+        text-align: center;
         margin: 10px;
     }
 }
 
-/*------------------------------STYLING AV FÖRSTA-SIDA-----------------------------*/
-.background {
-    background-image: url(Background.webp);
-    background-size: cover;
-    background-position: center center;
+/*------------------------------STYLING AV INDEX-SIDA-----------------------------*/
+.index-main {
     align-items: center;
     justify-content: center;
     text-align: center;
     height: 100%;
     width: 100%;
     position: relative;
-    z-index: 2;
 }
 
-
-
-.rubrikindex {
-    font-size: 72pt;
-    font-family: Sinete;
+#section-one-indexsite {
+    background-image: url(Background.webp);
+    background-size: cover;
+    background-position: center center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    padding-top: 10px;
+    height: 100vh;
+    width: auto;
+    position: relative;
 }
 
+/* H2 */
+#filmtitel {
+    font-size: 6em;
+    font-family: "baskerville-display-pt", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Countdown */
 .countdown {
-    font-size: 120pt;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column: span 4;
+    margin-left: 250px;
+    margin-right: 250px;
     justify-content: center;
     align-items: center;
-    display: flex;
     text-align: center;
-}
-
-/* Dagar timmar minuter sekunder */
-
-.dtms {
-    word-spacing: 190px;
+    font-family: "roboto", sans-serif;
     font-size: 12pt;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 2pt;
 }
 
-.buttonindex {
+/* Countdown: Text "DAGAR TIMMAR MINUTER SEKUNDER */
+.countdown >span { /* Om en span är inuti .countdown ska den ha 60pt som fontsize, utan > får både .countdown + span 60pt i fontsize eller så får span "generell styling" */
+    font-size: 70pt;
+}
+
+#nedraknare-dagar {
+    grid-column: 1;
+}
+
+#nedraknare-timmar {
+    grid-column: 2;
+}
+
+#nedraknare-minuter {
+    grid-column: 3;
+}
+
+#nedraknare-sekunder {
+    grid-column: 4;
+}
+
+/* Till biljetter knapp */
+.button-index {
     padding-top: 80px;
     color:#fff;
     justify-content: center;
     align-items: center;
-    
 }
 
-/*Responsiv design för indexsida */
+/* Gradient */
+#section-two-indexsite {
+    height: 100vh;
+    background-color: #8b0101;
+    background: linear-gradient(0deg, #8b0101 -20%, #010101 40%); /* deg = degrees/lutning av gradient) */
+}
 
+/* Responsiv design för indexsida */
 @media(max-width: 1200px) {
-    .rubrikindex {
+    #filmtitel {
         justify-content: center;
         align-items: center;
         display: flex;
@@ -307,20 +369,28 @@ footer {
         font-size: 100pt;
     }
 
-    .buttonindex {
+    .button-index {
         padding-top: 120px;
     }
 }
 
 @media(max-width: 992px) {
-    .rubrikindex {
+    #filmtitel {
         justify-content: center;
         align-items: center;
-        display: flex;
+        grid-column: span 4;
         text-align: center;
         font-size: 64pt;
         padding-top: 45vw;
     }
+
+    .countdown {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
     .dtms {
         word-spacing: 180px;
     }
@@ -345,11 +415,18 @@ footer {
     padding-right: 15vw;
 }
 
-@media(max-width: 992px) {
-    .layout {
-        display: block;
+@media(max-width: 1200px) {
+    .layout { 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }    
+    
+    .p-storysite {
+            max-width: 1.5vh;
     }
-}
+} 
 
 .story {
    grid-area: story;
@@ -358,12 +435,6 @@ footer {
 
 .photo1 {
    grid-area: photo1;
-}
-
-.line1 {
-    grid-area: line1;
-    padding-left: 100px;
-    padding-top: 100px;
 }
 
 .chapter1 {
@@ -396,29 +467,26 @@ footer {
   padding-top: 100px;
 }
 
-/* Knapp */
+.h2-storysite {
+    font-size: 2em;
+}
 
-.buttonstory {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    text-align: center;
+.p-storysite {
+    max-width: 50vh;
+    font-size: 1.2em;
+    font-weight: 400;
+    font-style: normal;
 }
 
 /*------------------------------STYLING AV BILJETT-SIDA-----------------------------*/
 
 /* Gradient */
-
 .body-biljetter {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100%;
-    width: 100%;
-    background: rgb(147,31,31);
-    background: linear-gradient(180deg, rgba(147,31,31,1) 0%, rgba(0,0,0,1) 5%);
 }
 .body-biljetter::after {
     content: "";
@@ -428,7 +496,6 @@ footer {
     left: 0;
     width: 100%;
     height: 6.1%;
-    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(147,31,31,1) 100%);
 }
 
 .seat {
@@ -444,17 +511,32 @@ footer {
     display: flex;
 }
 
-.rubrik {
-    font-size: 48pt;
-    font-family: Sinete;
+.biljetter-container1 {
+    font-style: normal;
+    text-align: center;
+    font-weight: 400;
+}
+
+.rubrik-biljetter {
+    font-family: "baskerville-display-pt", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 45pt;
+    margin-bottom: 0;
+}
+
+.ingress-biljetter {
+    font-family: "roboto", sans-serif;
+    font-size: 13pt;
+    padding-bottom: 10pt;
 }
 
 .seat.selected {
-    background-color: #06bfff;
+    background-color: #234b7e;
 }
 
 .seat.occupied {
-    background-color: #fff;
+    background-color: #8b0101;
 }
 
 .seat:nth-of-type(2) {
@@ -508,13 +590,88 @@ footer {
     perspective: 1000px;
     margin-bottom: 30px;
 }
-.text {
-    padding-bottom: 100px;
+.seats-text {
+    padding-bottom: 5px;
     font-size: 12pt;
 }
 
-/* Responsiv design för biljettbokning */
+/* Fortsätt knapp */
+.button-fortsatt a { /* Den har någon ful grå rektangel bakom sig jag inte lyckas bli av med */
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    background-color: #8b0101;
+    border-radius: 50px;
+    padding: 8px 16px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 26px;
+    text-decoration: none;
+    margin-top: 20px;
+    margin-bottom: 70px;
+}
 
+/* Fortsätt knapp: Hover effekt */
+  .button-fortsatt a:hover {
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    background-color: #444451;
+    border-radius: 50px;
+    padding: 8px 16px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 26px;
+    text-decoration: none;
+  }
+
+
+/* Rubrik "Priser" */
+.h3-priser {
+    font-size: 20pt;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+/* Text: Priser*/
+.biljettpriser {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    'p-priser-typer p-priser-summa';
+    grid-gap: 375px;
+}
+
+.p-priser-typer {
+    font-family: "roboto", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 20px;
+    letter-spacing: 1.3px;
+    text-align: left;
+    color: #234b7e;
+}
+
+.p-priser-summa {
+    font-family: "roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    letter-spacing: 1.1px;
+    word-spacing: 1px;
+    text-align: right;
+}
+
+#gradient-biljetter {
+    width: 100%;
+    height: 80vh;
+    background-color: #8b0101;
+    background: linear-gradient(0deg, #8b0101 -20%, #010101 50%); /* deg = degrees/lutning av gradient) */
+}
+
+/* Responsiv design för biljettbokning */
 @media(max-width: 992px) {
     .body-biljetter {
         font-size: 2vh;
