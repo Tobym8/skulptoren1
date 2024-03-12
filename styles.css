@@ -599,7 +599,7 @@ footer {
 .button-fortsatt a { /* Den har någon ful grå rektangel bakom sig jag inte lyckas bli av med */
     display: inline-block;
     outline: 0;
-    border: 0;
+    border: none;
     background-color: #8b0101;
     border-radius: 50px;
     padding: 8px 16px;
