@@ -1,138 +1,180 @@
 <!DOCTYPE html>
 <html lang="sv">
-    <head>
-        <meta charset="UTF-8">
-        <title>Story</title>
-        <link rel="stylesheet" href="styles.css">
-        <link rel="icon" type="image/x-icon" href="bunny_symbol-tngd46.png">
-        <link rel="stylesheet" href="https://use.typekit.net/ytz6faf.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
-        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <title>Biljetter</title>
+    <link rel="stylesheet" href="styles.css"> <!--CSS-->
+    <link rel="icon" type="image/x-icon" href="bunny_symbol-tngd46.png"> <!--Favicon-->
+    <link rel="stylesheet" href="https://use.typekit.net/ytz6faf.css"> <!--Roboto typsnitt-->
+    <link rel="stylesheet" href="https://use.typekit.net/pbj6rov.css"> <!--Bebas Neue Pro typsnitt-->
+    <link rel="stylesheet" href="https://use.typekit.net/vyi1wpo.css"> <!--Baskerville PT typsnitt-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> <!--Vad är detta?-->
+</head>
 <body>
+    <!--HEADER-->
     <header>
         <!--Navigation-->
         <nav class="navbar">
-         <!--Logotyp-->
+            <!--Logotyp-->
             <div class="logo">
                 <li><a href="index.html"><img src="bunny_symbol-tngd46.png" alt="Skulptören logotyp"></li>
             </div>
+            <!--Relativa länkar-->
             <ul class="links">
                 <li><a href="index.html">HEM</a></li>
                 <li><a href="story.html">STORY</a></li>
                 <li><a href="biljetter.html">BILJETTER</a></li>
                 <li><a href="kontakt.html">KONTAKT</a></li>
             </ul>
-            <!--Hamburgare-->
+            <!--Hamburgarmeny-->
             <div class="toggle_btn">
                 <i class="fa-solid fa-bars"></i>
             </div>
         </nav>
         <!--Dropdown menu-->
         <div class="dropdown_menu">
-                <li><a href="index.html">HEM</a></li>
-                <li><a href="story.html">STORY</a></li>
-                <li><a href="biljetter.html">BILJETTER</a></li>
-                <li><a href="kontakt.html">KONTAKT</a></li>
+            <li><a href="index.html">HEM</a></li>
+            <li><a href="story.html">STORY</a></li>
+            <li><a href="biljetter.html">BILJETTER</a></li>
+            <li><a href="kontakt.html">KONTAKT</a></li>
         </div>
     </header>
+    
     <div class="body-biljetter">
-    <div class="rubrik.container">
-        <p class="rubrik">SKULPTÖREN</p>
+        <div class="biljetter-container1">
+            <h2 class="rubrik-biljetter">SKULPTÖREN</h2>
+            <p class="ingress-biljetter">Boka biljetter för premiären den 21 juni 2024 kl 19:00 på CNEMA i Norrköping.</p>
+        </div>
+
+        <ul class="showcase">
+            <li>
+                <div class="seat selected"></div>
+                <small>Vald plats</small>
+            </li>
+
+            <li>
+                <div class="seat occupied"></div>
+                <small>Upptagen</small>
+            </li>
+        </ul>
+
+        <div class="containerseats">
+            <div class="screen"></div>
+            <div class="row">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+            </div>
+
+            <div class="row">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+            </div>
+
+            <div class="row">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+            </div>
+
+            <div class="row">
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+            </div>
+
+            <div class="row">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+            </div>
+
+            <div class="row">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+            </div>
+        </div>
+
+        <p class="seats-text">Du har valt <span id="count">0</span> säten</p>
+
+        <!--Fortsätt-knapp-->
+        <div class="button-biljetter">
+            <button class="button-fortsatt"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Fortsätt</a></button>
+        </div>
+
+        <h3 class="h3-priser">Priser</h3>
+
+        
+        <div class="biljettpriser">
+            <div class="p-priser-typer">
+                <p class="priser-ordinarie">Ordinarie</p>
+                <p class="priser-student">Student</p>
+                <p class="priser-pensionar">Pensionär</p>
+            </div>
+            
+                <div class="p-priser-summa">
+                    <p class="priser-120kr">120.00 kr</p>
+                    <p class="priser-60kr">60.00 kr</p>
+                    <p class="priser-60kr">60.00 kr</p>
+                </div>
+            </div>
+        </div>
+
+        <section id="gradient-biljetter">
+            <!--Här ligger det en gradient i css-->
+        </section>
     </div>
 
-    <ul class="showcase">
-        <li>
-            <div class="seat selected"></div>
-            <small>Vald plats</small>
-        </li>
-
-        <li>
-            <div class="seat occupied"></div>
-            <small>Upptagen</small>
-        </li>
-    </ul>
-
-    <div class="containerseats">
-        <div class="screen"></div>
-        <div class="row">
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-        </div>
-
-        <div class="row">
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat occupied"></div>
-            <div class="seat occupied"></div>
-        </div>
-
-        <div class="row">
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat occupied"></div>
-            <div class="seat occupied"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-        </div>
-
-        <div class="row">
-            <div class="seat occupied"></div>
-            <div class="seat occupied"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-        </div>
-
-        <div class="row">
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat occupied"></div>
-            <div class="seat occupied"></div>
-            <div class="seat"></div>
-            <div class="seat occupied"></div>
-            <div class="seat occupied"></div>
-        </div>
-
-        <div class="row">
-            <div class="seat"></div>
-            <div class="seat"></div>
-            <div class="seat occupied"></div>
-            <div class="seat occupied"></div>
-            <div class="seat occupied"></div>
-            <div class="seat occupied"></div>
-            <div class="seat"></div>
-            <div class="seat"></div>
-        </div>
-    </div>
-
-    <p class="text">
-        Du har valt <span id="count">0</span> säten
-    </p>
-    </div>
+    <!--FOOTER-->
     <footer>
-        <div class="footercontainer">
+        <!--Stor container för socials + länkar-->
+        <div class="bigfootercontainer">
+        
+            <!--Liten container för logga-->
+            <div class="norcopiapictures">
+                <img src="norkopiapictures.png" alt="Norcopia Pictures logotyp">
+            </div>
+            
+            <!--Liten container för socials-->
             <div class="socials">
                 <img src="icons8-instagram.svg">
                 <img src="icons8-facebook-50.png">
                 <img src="icons8-twitterx-50.png">
             </div>
+
+            <!--Liten container för länkar-->
             <div class="footernav">
                 <ul>
                     <li><a href="index.html">HEM</a></li>
@@ -142,11 +184,10 @@
                 </ul>
             </div>
         </div>
-        <div class="footerbottom">
-            <p>Copyright &copy;2024 <span class="designer">Tobias, Elin, Lova</span></p>
-        </div>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="script.js"></script>
- </body>
+
+<!--JAVASCRIPT LÄNK-->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="script.js"></script>
+
+</body>
 </html>
