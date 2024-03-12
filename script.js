@@ -1,12 +1,12 @@
-/* Java Nedraknare */
+/* Javascript Nedraknare */
 
 /*Skriv javascriptkod för en nedräknare som räknar ned från dagens datum till 1 april 2024. Nedräkningen ska skrivas ut i elementet med id "nedraknare". Texten som skrivs ut ska vara "Skulptören", 
 följt av xxx dagar, xxx timmar, xxx minuter, xxx sekunder. */
 
 const nedraknareElement = document.getElementById("nedraknare");
 
-// Datum för 1 april 2024
-const targetDate = new Date("2024-04-01T00:00:00");
+// Datum för 21 juni 2024
+const targetDate = new Date("2024-06-21T00:00:00");
 
 // Funktion för att uppdatera nedräkningen
 function updateCountdown() {
@@ -21,8 +21,11 @@ function updateCountdown() {
 
     // Skapa textsträngen för nedräkningen
     const countdownText = `${days} : ${hours} : ${minutes} : ${seconds}`;
+    document.getElementById("nedraknare-dagar").textContent = days;
+    document.getElementById("nedraknare-timmar").textContent = hours;
+    document.getElementById("nedraknare-minuter").textContent = minutes;
+    document.getElementById("nedraknare-sekunder").textContent = seconds;
     
-
     // Uppdatera elementet med nedräkningen
     nedraknareElement.textContent = countdownText;
 }
@@ -30,7 +33,7 @@ function updateCountdown() {
 // Uppdatera nedräkningen varje sekund
 setInterval(updateCountdown, 1000);
 
-/* Java Nav */
+/* Javascript Nav */
 const toggleBtn = document.querySelector('.toggle_btn')
 const toggleBtnIcon = document.querySelector('.toggle_btn i')
 const dropDown_Menu = document.querySelector('.dropdown_menu')
