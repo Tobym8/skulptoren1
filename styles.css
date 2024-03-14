@@ -1,4 +1,8 @@
 /*----------------------GENERELL STYLING FÖR HELA WEBBSIDAN-----------------------*/
+html {
+    scroll-behavior: smooth;
+  }
+
 body {
         margin: 0;
         padding: 0;
@@ -19,8 +23,11 @@ main {
 
 /* HEADER: Header */
 header {
-    position: relative;
-}
+    position: sticky;
+    top: 0;
+    z-index: 8;
+    background-color: #000;
+    }
 
 header a {
     position: relative;
@@ -110,7 +117,7 @@ header a:hover::before {
     font-size: 50px;
 }
 
-/* HEADER: Navbar: Knapp "Till biljetter */
+/* HEADER: Knapp "Till biljetter */
 .button1 {
     position: relative;
     padding: 10px 25px;
@@ -160,24 +167,24 @@ footer {
 /* FOOTER: Norcopia pictures */
 .norcopiapictures {
     grid-area: norcopiapictures;
-    margin-left: 170px;
-    margin-top: 60px;
+    margin-left: 9vw;
+    margin-top: 5.5vw;
 }
 
 .norcopiapictures img {
-    width: 40%;
+    width: 18vw;
     height: auto;
 }
 
 /* FOOTER: Liten container för socials inom den stora containern */
 .socials {
     grid-area: socials;
-    margin-left: 170px;
-    margin-top: 87px;
+    margin-left: 5vw;
+    margin-top: 9.2vw;
 }
 
 .socials img {
-    width: 40px;
+    width: 5vw;
     height: auto;
 }
 
@@ -185,6 +192,7 @@ footer {
 .footernav {
     grid-area: footernav;
     margin-top: 80px;
+    text-align: center;
 }
 
 .footernav ul {
@@ -195,7 +203,7 @@ footer {
 }
 
 .footernav li{
-    list-style-type: none;   
+    list-style-type: none; 
 }
 
 .footernav ul li a{
@@ -215,7 +223,7 @@ footer {
 	left: 0;
 	width: 0;
 	height: 2px;
-	background: #ffffff;
+	background: #fff;
 	transition: .3s;
 }
 
@@ -225,22 +233,25 @@ footer {
 
 /* FOOTER: Copyright */
 .smallfootercontainer {
-    padding: 30px;
+    padding-top: 0.2vw;
+    padding-bottom: 2vw;
     text-align: center;
 }
 
 /* FOOTER: Copyright: Text */
 .copyright-text {
-    font-size: 0.8em;
+    font-size: 1.5vw;
+    text-align: center;
 }
 
 /* FOOTER: Copyright: Namn */
 .designer {
-    font-size: 0.8em;
+    font-size: 1.5vw;
     opacity:0.7;
     letter-spacing: 1px;
     font-weight: 400;
     margin: 0px 5px;
+    text-align: center;
 }
 
 /* Responsiv design för navbar och footer */
@@ -265,9 +276,9 @@ footer {
     }
 
     .footernav ul li {
-        width: 93%;
         text-align: center;
         margin: 10px;
+        display: block;
     }
 }
 
@@ -282,7 +293,7 @@ footer {
 }
 
 #section-one-indexsite {
-    background-image: url(Background.webp);
+    background-image: url(bilder/arbis-background.webp);
     background-size: cover;
     background-position: center center;
     align-items: center;
@@ -300,6 +311,7 @@ footer {
     font-family: "baskerville-display-pt", serif;
     font-weight: 400;
     font-style: normal;
+    margin-bottom: 1vw;
 }
 
 /* Countdown */
@@ -321,7 +333,7 @@ footer {
 
 /* Countdown: Text "DAGAR TIMMAR MINUTER SEKUNDER */
 .countdown >span { /* Om en span är inuti .countdown ska den ha 60pt som fontsize, utan > får både .countdown + span 60pt i fontsize eller så får span "generell styling" */
-    font-size: 70pt;
+    font-size: 8vw;
 }
 
 #nedraknare-dagar {
@@ -340,39 +352,71 @@ footer {
     grid-column: 4;
 }
 
-/* Till biljetter knapp */
-.button-index {
-    padding-top: 80px;
-    color:#fff;
+/* Styling av scrollknapp */
+.button-scroll-index {
     justify-content: center;
-    align-items: center;
+    background-color: transparent;
+    border: none;
+    margin-top: 140px;
+}
+
+.scrollknapp-index {
+    margin: 3px;
+    padding: 0px;
+    margin: auto;
+}
+
+.down-arrow-index {
+    width: 12vw;
+    margin: 0;
+    padding-top: 1vw;
+    padding: 0px;
+    margin: 0px;
 }
 
 /* Gradient */
 #section-two-indexsite {
-    height: 100vh;
     background-color: #8b0101;
-    background: linear-gradient(0deg, #8b0101 -20%, #010101 40%); /* deg = degrees/lutning av gradient) */
+    background: linear-gradient(0deg, #8b0101 -20%, #010101 33%); /* deg = degrees/lutning av gradient) */
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Responsiv design för indexsida */
-@media(max-width: 1200px) {
-    #filmtitel {
-        justify-content: center;
-        align-items: center;
-        display: flex;
-        text-align: center;
-        font-size: 64pt;
-        padding-top: 15vw;
-    }
-    .countdown {
-        font-size: 100pt;
-    }
-
-    .button-index {
-        padding-top: 120px;
-    }
+#section-empty-index {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 300px;
+    margin-top: 0px;
+    padding: 0px;
 }
+
+#trailer {
+    width: 44%;
+    height: auto;
+    padding-bottom: 500px;
+    display: flex;
+    flex-direction: column;
+  }
+
+video {
+    width: 100%;
+    height: auto;
+}
+
+/* Till biljetter knapp */
+.button-index {
+    padding-top: 2vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.button1 {
+    color:#fff;
+    background-color: #931f1f;
+}
+
 
 @media(max-width: 992px) {
     #filmtitel {
@@ -380,39 +424,267 @@ footer {
         align-items: center;
         grid-column: span 4;
         text-align: center;
-        font-size: 64pt;
-        padding-top: 45vw;
+        font-size: 10vw;
+        padding-top: 20vw;
+        padding-bottom: 2vw;
     }
 
     .countdown {
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 60px 60px 60px 60px 60px 60px 60px 60px;
+        grid-template-areas: 
+        'nedraknare-dagar'
+        'dd'
+        'nedraknare-timmar'
+        'tt'
+        'nedraknare-minuter'
+        'mm'
+        'nedraknare-sekunder'
+        'ss';
+        grid-gap: 75px;
+        font-size: 30px;
         justify-content: center;
         align-items: center;
         flex-direction: column;
     }
 
-    .dtms {
-        word-spacing: 180px;
+    #nedraknare-dagar {
+        grid-area: nedraknare-dagar;
+        font-size: 120px;
+     }
+
+     #nedraknare-timmar {
+        grid-area: nedraknare-timmar;
+        font-size: 120px;
+     }
+
+     #nedraknare-minuter {
+        grid-area: nedraknare-minuter;
+        font-size: 120px;
+     }
+
+     #nedraknare-sekunder {
+        grid-area: nedraknare-sekunder;
+        font-size: 120px;
+     }
+
+     #dd {
+        grid-area: dd;
+        padding-top: 0px;
+        margin-top: 0px;
+     }
+
+     #tt {
+        grid-area: tt;
+        padding-top: 0px;
+        margin-top: 0px;
+     }
+
+     #mm {
+        grid-area: mm;
+        padding-top: 0px;
+        margin-top: 0px;
+     }
+
+     #ss {
+        grid-area: ss;
+        padding-top: 0px;
+        margin-top: 0px;
+     }
+
+    .button-index {
+        padding-top: 80px;
+        color:#fff;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .button1 {
+        position: relative;
+        padding: 2vw 4vw;
+        font-size: 5vw;
+        font-family: "roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color: #fff;
+        background-color: #931f1f;
+        border-radius: 25vw;
+        border: none;
+    }
+
+    .button1 a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .button1 a::before {
+        content: '';
+        position: absolute;
+        top: 80%;
+        left: 28px;
+        width: 0;
+        height: 2px;
+        background: #fff;
+        transition: .3s;
+    }
+
+    .button1 a:hover::before {
+        width: 70%;
+    }
+
+    /* Gradient */
+    #section-two-indexsite {
+    background-color: #8b0101;
+    background: linear-gradient(0deg, #8b0101 -20%, #010101 35%); /* deg = degrees/lutning av gradient) */
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .trailer {
+        width: 80%;
     }
 }
 
 /*------------------------------STYLING AV STORY-SIDA-----------------------------*/
 
+/* Grid */
 .layout {
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 0px;
     display: grid;
 	grid-template-columns: auto auto auto;
     grid-template-areas: 
-    'story story photo1'
-    'line1 line1 line1'
-    'photo2 chapter1 chapter1'
-    'chapter2 chapter2 photo3'
-    'photo4 chapter3 chapter3';
-	grid-gap: 5px;
-	padding: 5px;
+    'text-storyline text-storyline foto-kanin'
+    '. button-scroll .'
+    'foto-lova text-lova text-lova'
+    'text-elin text-elin foto-elin'
+    'foto-tobias text-tobias text-tobias';
+	padding: 0px;
     padding-left: 15vw;
     padding-right: 15vw;
+}
+
+.text-storyline {
+   grid-area: text-storyline;
+   width: 38vw;
+   margin-top: 45px;
+   margin-left: 80px;
+}
+
+#foto-kanin {
+   grid-area: foto-kanin;
+   margin-top: 1px;
+   margin-left: 40px;
+}
+
+#text-lova {
+  grid-area: text-lova;
+  padding-top: 175px;
+  width: 38vw;
+  margin-left: 40px;
+}
+
+#foto-lova {
+   grid-area: foto-lova;
+   padding-top: 190px;
+   margin-left: 80px;
+}
+
+#text-elin {
+    grid-area: text-elin;
+    padding-top: 35px;
+    width: 38vw;
+    margin-left: 93px;
+}
+
+#foto-elin {
+    grid-area: foto-elin;
+    padding-top: 50px;
+    margin-left: 40px;
+}
+
+#text-tobias {
+    grid-area: text-tobias;
+    padding-top: 35px;
+    width: 38vw;
+    margin-left: 40px;
+}
+
+#foto-tobias {
+  grid-area: foto-tobias;
+  padding-top: 50px;
+  margin-left: 80px;
+}
+
+.h2-storysite {
+    font-size: 2em;
+}
+
+.h3-storysite {
+    font-size: 1.7em;
+    font-weight: 700;
+}
+
+#info-om-film {
+    font-weight: 400;
+    line-height: 25px;
+    font-size: 1vw;
+}
+
+.p-storysite {
+    max-width: 100vw;
+    font-size: 1.2vw;
+    font-weight: 300;
+    line-height: 28px;
+}
+
+.ig-link-story {
+    margin-top: 15px;
+    width: 10%;
+    height: auto;
+}
+
+.fb-link-story {
+    margin-left: 10px;
+    width: 10%;
+    height: auto;
+}
+
+/* Styling av scrollknapp */
+.button-scroll-story {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+}
+
+.scrollknapp-story {
+    grid-area: button-scroll;
+    padding-top: 40px;
+}
+
+.down-arrow-story {
+    width: 4vw;
+    margin: 0;
+    padding-top: 1vw;
+    grid-area: button-scroll;
+    padding: 0px;
+    margin: 0px;
+}
+
+#gradient-story {
+    width: 100%;
+    height: 40vh;
+    background-color: #8b0101;
+    background: linear-gradient(0deg, #8b0101 -20%, #010101 80%); /* deg = degrees/lutning av gradient) */
+}
+
+.bold {
+    font-weight: 700;
 }
 
 @media(max-width: 1200px) {
@@ -426,56 +698,6 @@ footer {
     .p-storysite {
             max-width: 1.5vh;
     }
-} 
-
-.story {
-   grid-area: story;
-   padding-top: 100px;
-}
-
-.photo1 {
-   grid-area: photo1;
-}
-
-.chapter1 {
-  grid-area: chapter1;
-  padding-top: 220px;
-}
-
-.photo2 {
-   grid-area: photo2;
-   padding-top: 190px;
-}
-
-.chapter2 {
-    grid-area: chapter2;
-    padding-top: 80px;
-}
-
-.photo3 {
-    grid-area: photo3;
-    padding-top: 50px;
-}
-
-.chapter3 {
-    grid-area: chapter3;
-    padding-top: 130px;
-}
-
-.photo4 {
-  grid-area: photo4;
-  padding-top: 100px;
-}
-
-.h2-storysite {
-    font-size: 2em;
-}
-
-.p-storysite {
-    max-width: 50vh;
-    font-size: 1.2em;
-    font-weight: 400;
-    font-style: normal;
 }
 
 /*------------------------------STYLING AV BILJETT-SIDA-----------------------------*/
@@ -527,12 +749,13 @@ footer {
 
 .ingress-biljetter {
     font-family: "roboto", sans-serif;
-    font-size: 13pt;
+    font-size: 1.2vw;
     padding-bottom: 10pt;
+    width: 50vw;
 }
 
 .seat.selected {
-    background-color: #fff;
+    background-color: #eadcc7;
 }
 
 .seat.occupied {
@@ -595,44 +818,49 @@ footer {
     font-size: 12pt;
 }
 
-/* Fortsätt knapp */
-.button-fortsatt a { /* Den har någon ful grå rektangel bakom sig jag inte lyckas bli av med */
-    display: inline-block;
-    outline: 0;
-    border: none;
-    background-color: #8b0101;
-    border-radius: 50px;
-    padding: 8px 16px;
-    font-size: 20px;
-    font-weight: 700;
-    color: #fff;
-    line-height: 26px;
-    text-decoration: none;
+.button-biljetter {
     margin-top: 20px;
-    margin-bottom: 70px;
 }
 
-/* Fortsätt knapp: Hover effekt */
-  .button-fortsatt a:hover {
-    display: inline-block;
-    outline: 0;
-    border: 0;
-    background-color: #444451;
-    border-radius: 50px;
-    padding: 8px 16px;
-    font-size: 20px;
-    font-weight: 700;
+/* Fortsätt knapp */
+.button-fortsatt { 
+    position: relative;
+    padding: 10px 25px;
+    font-size: 18pt;
+    font-family: "roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     color: #fff;
-    line-height: 26px;
-    text-decoration: none;
-  }
+    background-color: #931f1f;
+    border-radius: 25px;
+    border: none;
+    }
 
+.button-fortsatt a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.button-fortsatt a::before {
+    content: '';
+    position: absolute;
+    top: 80%;
+    left: 28px;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: .3s;
+    }
+
+.button-fortsatt a:hover::before {
+    width: 60%;
+}
 
 /* Rubrik "Priser" */
 .h3-priser {
     font-size: 20pt;
-    margin-top: 10px;
-    margin-bottom: 5px;
+    margin-top: 60px;
+    margin-bottom: 10px;
 }
 
 /* Text: Priser*/
@@ -651,7 +879,6 @@ footer {
     font-size: 20px;
     letter-spacing: 1.3px;
     text-align: left;
-    color: #fff;
 }
 
 .p-priser-summa {
@@ -666,9 +893,9 @@ footer {
 
 #gradient-biljetter {
     width: 100%;
-    height: 80vh;
+    height: 30vh;
     background-color: #8b0101;
-    background: linear-gradient(0deg, #8b0101 -20%, #010101 50%); /* deg = degrees/lutning av gradient) */
+    background: linear-gradient(0deg, #8b0101 -20%, #010101 90%); /* deg = degrees/lutning av gradient) */
 }
 
 /* Responsiv design för biljettbokning */
@@ -701,7 +928,11 @@ footer {
 
 /*------------------------------STYLING AV KONTAKT-SIDA-----------------------------*/
 
-/*Centrering av rubrik och text*/
+body .kontakt {
+    display: flex;
+    place-items: center;
+}
+
 .kontakta-oss {
   position: relative;
   display: flex;
@@ -712,62 +943,66 @@ footer {
   width: 100%;
 }
 
-.kontakt-content {
-	text-align: center;
-    width: 100%;
-    height: 100%;
-    background: rgb(147,31,31);
-    background: linear-gradient(180deg, rgba(147,31,31,1) 0%, rgba(0,0,0,1) 23%);
-}
-
-.kontakt-content::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 10%;
-    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(147,31,31,1) 100%);
-    z-index: 1;
-}
-
-.kontakt-content h2 {
+.h2-kontakta-oss {
+    text-align: center;
     justify-content: center;
-	font-size: 48px;
-	font-weight: 500;
-	color: #fff;
+	font-size: 38px;
+    font-weight: 700;
+    margin-top: 55px;
+    width: 50vw;
 }
+
 .kontakt-content p {
 	font-weight: 300;
-	color: #fff;
+    text-align: center;
+    font-size: 1.2vw;
 }
 
-.kontakt-container {
-	justify-content: center;
-	align-items: center;
-}
 .kontaktinfo {
-	flex-direction: column;
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-areas:
+    'adress' 'telefon' 'mail';
     justify-content: center;
-    align-items: center;	
+    margin-top: 50px;
+    text-align: center;
 }
 
-.box {
-	padding: 20px 0; /*padding för att få snyggt mellanrum*/
-	display: flex;
+.adress p {
+    font-size: 1vw;
+    font-weight: 300;
 }
-/* Ikoner för kontaktmedel */
-.icon {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 22px;
+
+.kontaktinfo h2 {
+    font-family: "bebas-neue-pro", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2vw;
+    margin-bottom: 25px;
 }
-/* Generella bestämelser för text */
-.kontakttext {
-    display: flex;
-    flex-direction: column;
-	margin-left: 20px;
-	font-size: 18px;
-	color: #fff;
+
+.adress-icon {
+    width: 4vw;
+}
+
+.telefon-icon {
+    width: 5vw;
+}
+
+.mail-icon {
+    width: 7.5vw;
+    margin-top: 10px
+}
+
+.kontaktinfo p {
+    font-size: 1vw;
+    font-weight: 300;
+    line-height: 10px;
+}
+
+#gradient-kontakt {
+    width: 100%;
+    height: 40vh;
+    background-color: #8b0101;
+    background: linear-gradient(0deg, #8b0101 -20%, #010101 70%); /* deg = degrees/lutning av gradient) */
 }
