@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Kontakt</title>
     <link rel="stylesheet" href="styles.css"> <!--CSS-->
-    <link rel="icon" type="image/x-icon" href="bunny_symbol-tngd46.png"> <!--Favicon-->
+    <link rel="icon" type="image/x-icon" href="ikoner/bunny_symbol-tngd46.png"> <!--Favicon-->
     <link rel="stylesheet" href="https://use.typekit.net/ytz6faf.css"> <!--Roboto typsnitt-->
     <link rel="stylesheet" href="https://use.typekit.net/pbj6rov.css"> <!--Bebas Neue Pro typsnitt-->
     <link rel="stylesheet" href="https://use.typekit.net/vyi1wpo.css"> <!--Baskerville PT typsnitt-->
@@ -17,7 +17,7 @@
         <nav class="navbar">
             <!--Logotyp-->
             <div class="logo">
-                <li><a href="index.html"><img src="bunny_symbol-tngd46.png" alt="Skulptören logotyp"></li>
+                <li><a href="index.html"><img src="ikoner/bunny_symbol-tngd46.png" alt="Skulptören logotyp"></li>
             </div>
             <!--Relativa länkar-->
             <ul class="links">
@@ -40,45 +40,60 @@
         </div>
     </header>
     
+    <main class="main-kontakt">
     <div class="kontakta-oss">
         <div class="kontakt-content">
-            <h2>Kontakta oss</h2>
-            <p>Premiärvisning av Skulptören äger rum på Gnema i Norrköping den 21 juni 2024.</p>
-            <p>För mer info eller frågor kontakta oss.</p>
+            <h2 class="h2-kontakta-oss">KONTAKTA OSS</h2>
+            <p>Är du är nyfiken på filmprojektet eller har du andra frågor? Vi svarar mer än gärna! </p>
         </div>
-        <div class="kontakt-container">
-            <div class="kontaktinfo">
-                <div class="box">
-                    <div class="icon"><img src="map.png" alt="telefon"></div>
-                    <div class="kontakttext">
-                        <h3>Adress Gnema</h3>	
-                        <p>Kungsgatan 56<br>Norrköping<br>602 33</p>
-                    </div>
+        <div class="kontaktinfo">
+                <div class="adress">
+                    <img class="adress-icon" src="ikoner/map-icon.png" alt="Ikon av en kartnål">
+                    <h2 class="adress-rubrik">ADRESS GNEMA</h2>
+                    <p class="gatunummer">Kungsgatan 56</p>
+                    <p class="stad-postnummer">602 33, Norrköping</p>
                 </div>
-                <div class="box">
-                    <div class="icon"><img src="telefon.png" alt="telefon"></div>
-                    <div class="kontakttext">
-                        <h3>Telefon</h3>
-                        <p>010-14 50 50</p>
-                    </div>	 
+
+                <div class="telefon">
+                    <img class="telefon-icon" src="ikoner/phone-icon.png" alt="Ikon av en telefon">
+                    <h2 class="telefon-rubrik">TELEFON</h2>
+                    <p class="telefonnummer">010-14 50 50</p>
+                    <p class="stad-postnummer"></p>
                 </div>
-                <div class="box">
-                    <div class="icon"><img src="mail.png" alt="mail"></div>
-                    <div class="kontakttext">
-                        <h3>Email</h3>
-                        <p>skulptoren@mail.se</p>
-                    </div>	 
+
+                <div class="mail">
+                    <img class="mail-icon" src="ikoner/mail-icon3.png" alt="Ikon av ett brev">
+                    <h2 class="mail-rubrik">EMAIL</h2>
+                    <p class="mailadress">norcopiapictures@gmail.com</p>
+                    <p class="stad-postnummer"></p>
                 </div>
             </div>
         </div>
+    </main>
+
+        <section id="gradient-kontakt">
+            <!--Här ligger det en gradient i css-->
+        </section>
+
     </div>
+    <!--FOOTER-->
     <footer>
-        <div class="footercontainer">
-            <div class="socials">
-                <img src="icons8-instagram.svg">
-                <img src="icons8-facebook-50.png">
-                <img src="icons8-twitterx-50.png">
+        <!--Stor container för socials + länkar-->
+        <div class="bigfootercontainer">
+        
+            <!--Liten container för logga-->
+            <div class="norcopiapictures">
+                <img src="bilder/norkopiapictures.png" alt="Norcopia Pictures logotyp">
             </div>
+            
+            <!--Liten container för socials-->
+            <div class="socials">
+                <img src="ikoner/icons8-instagram.svg">
+                <img src="ikoner/icons8-facebook-50.png">
+                <img src="ikoner/icons8-twitterx-50.png">
+            </div>
+
+            <!--Liten container för länkar-->
             <div class="footernav">
                 <ul>
                     <li><a href="index.html">HEM</a></li>
@@ -88,8 +103,10 @@
                 </ul>
             </div>
         </div>
-        <div class="footerbottom">
-            <p>Copyright &copy;2024 <span class="designer">Tobias, Elin, Lova</span></p>
+
+        <!--Stor container för copyright-->
+        <div class="smallfootercontainer">
+            <p>&copy; <span class="copyright-text">Copyright 2024</span><span class="designer">Elin Johansson, Tobias Fjäll, Lova Wallin</span></p>
         </div>
     </footer>
 
