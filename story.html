@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Story</title>
     <link rel="stylesheet" href="styles.css"> <!--CSS-->
-    <link rel="icon" type="image/x-icon" href="bunny_symbol-tngd46.png"> <!--Favicon-->
+    <link rel="icon" type="image/x-icon" href="ikoner/bunny_symbol-tngd46.png"> <!--Favicon-->
     <link rel="stylesheet" href="https://use.typekit.net/ytz6faf.css"> <!--Roboto typsnitt-->
     <link rel="stylesheet" href="https://use.typekit.net/pbj6rov.css"> <!--Bebas Neue Pro typsnitt-->
     <link rel="stylesheet" href="https://use.typekit.net/vyi1wpo.css"> <!--Baskerville PT typsnitt-->
@@ -17,7 +17,7 @@
         <nav class="navbar">
             <!--Logotyp-->
             <div class="logo">
-                <li><a href="index.html"><img src="bunny_symbol-tngd46.png" alt="Skulptören logotyp"></li>
+                <li><a href="index.html"><img src="ikoner/bunny_symbol-tngd46.png" alt="Skulptören logotyp"></li>
             </div>
             <!--Relativa länkar-->
             <ul class="links">
@@ -45,70 +45,83 @@
         <!--Layout-->
         <div class="layout">
             <!--Layout: Kanin-bild-->
-            <div class="photo1">
-                <img src="mask2.png" alt="bild på en kaninmask">
+            <div id="foto-kanin">
+                <img src="bilder/mask3.png" alt="Bild på en blodig kaninmask på en skulptur">
             </div>
             <!--Layout: Storyline-->
-            <div class="story">
+            <div class="text-storyline">
                 <h2 class="h2-storysite">Storyline</h2>
-                    <p class="p-storysite">Walter och hans kompisar från universitetet är på studentsittning på Arbisteatern i Norrköping.
-                    När kvällens första framträdande ska börja och ridån dras upp fylls salen med öronbedövande skrik.
-                    På scenen hänger en livlös kvinna i trådar likt en marionettdocka. Detta är det tredje mordoffret 
-                    som hittats vid en kulturell plats Norrköping under hösten 2024. Filmen följer kriminaldetektiv
-                    Caroline Hällström, hennes kollega Annika och hennes son Walter som tillsammans i en kamp mot klockan försöker fånga
-                    seriemördaren innan nästa mord begås.</p>
+                    <p id="info-om-film"><span class="bold">Åldersgräns:</span> Från 15 år<br><span class="bold">Speltid:</span> 1 tim 55 min<br><span class="bold">Genre:</span> Thriller, Deckare, Skräck</p>
+                        <p class="p-storysite">Walter och hans kompisar från universitetet är på studentsittning på Arbisteatern i Norrköping.
+                        När kvällens första framträdande ska börja och ridån dras upp fylls salen med öronbedövande skrik.
+                        På scenen hänger en livlös kvinna i trådar likt en marionettdocka. Detta är det tredje mordoffret 
+                        som hittats vid en kulturell plats Norrköping under hösten 2024. Filmen följer kriminaldetektiv
+                        Caroline Hällström, hennes kollega Annika och hennes son Walter som tillsammans i en kamp mot klockan försöker fånga
+                        seriemördaren innan nästa mord begås.</p>
             </div>
-
+            <!--Scrollknapp-->
+            <div class="scrollknapp-story">
+                <button class="button-scroll-story"><a href="#text-lova"><img src="ikoner/down-arrow-story.png" class="down-arrow-story"></a></button>
+            </div>
             <!--Layout: Lova-bild-->
-            <div class="photo2">
-                <img src="lova.png" alt="bild på karakär nr ett, Lova">
+            <div id="foto-lova">
+                <img src="bilder/lova.png" alt="bild på karakär nr ett, Lova">
             </div>
-
             <!--Layout: Lova-text-->
-            <div class="chapter1">
-            <h2 class="h2-storysite">Lova Wallin, manusförfattare</h2>
-                <p class="p-storysite">Idén till filmen kom ifrån det bristande utbudet på just
-                    filmer som denna. Jag ville skapa en film som stack ut på marknaden och som
-                    lockade de unga. Svenska deckare är populärt men inte riktigt gjorts med
-                    seriemördare på detta sätt. Jag ville också skapa en karaktär, i detta fall
-                    Walter, som de unga kunde känna igen sig i. Jag ville att de skulle kunna
-                    relatera mycket till honom och jobbade därför mycket med hur just han skulle
-                    porträtteras genom manuset.</p>
+            <div id="text-lova">
+                <h3 class="h3-storysite">Lova Wallin | Manusförfattare</h3>
+                    <p class="p-storysite">Idén till filmen kom från det bristande utbudet på
+                        filmer som denna. Jag ville skapa en film som sticker ut på marknaden och som
+                        lockar de unga. Svenska deckare är populärt men hade inte riktigt gjorts med
+                        seriemördare på detta sätt. Jag ville också skapa en karaktär, i detta fall
+                        Walter, som unga kan känna igen sig i. Jag ville att de skulle kunna
+                        relatera till honom och jobbade därför mycket med hur just han skulle
+                        porträtteras genom manuset.</p>
+                        <a href="https://www.instagram.com/lovaawallin" target="_blank"><img class="ig-link-story" src="ikoner/icons8-instagram.svg" alt="Instagram ikon/länk till Lova Wallins Instagramkonto"></a>
+                        <a href="https://www.facebook.com/lova.wallin.7" target="_blank"><img class="fb-link-story" src="ikoner/icons8-facebook-50.png" alt="Facebook ikon/länk till Lova Wallins Instagramkonto"></a>
             </div>
 
             <!--Layout: Elin-bild-->
-            <div class="photo3">
-                <img src="elin.png" alt="bild på karaktär nr två, Elin">
+            <div id="foto-elin">
+                <img src="bilder/elin.png" alt="bild på karaktär nr två, Elin">
             </div>
 
             <!--Layout: Elin-text-->
-            <div class="chapter2">
-            <h2 class="h2-storysite">Elin Johansson, regissör</h2>
-                <p class="p-storysite">Jag ville verkligen fånga den autentiska känslan av Norrköpings
-                    alla fina byggnader och platser. Jag ville att de som kommer här ifrån kan känna igen
-                    sig och kunna sätta in sig själv i skådespelarnas roller. Jag arbetade därför väldigt
-                    tätt med skådespelarna för att förmedla detta och tycker verkligen att vi lyckats.
+            <div id="text-elin">
+            <h3 class="h3-storysite">Elin Johansson | Regissör</h3>
+                <p class="p-storysite">Jag ville fånga den autentiska känslan av Norrköpings
+                    fina byggnader och platser och att de som kommer från Norrköping skulle känna igen
+                    sig och se sig själva i karaktärerna. Jag arbetade därför väldigt
+                    tätt med skådespelarna för att förmedla detta och tycker verkligen att vi lyckades.
                     Det är en dramatisk deckare som fortfarande är fartfylld med många intriger. Jag är
                     verkligen exalterad för premiären.</p>
+                    <a href="https://www.instagram.com/johanssonelin_/" target="_blank"><img class="ig-link-story" src="ikoner/icons8-instagram.svg" alt="Instagram ikon/länk till Elin Johanssons Instagramkonto"></a>
+                    <a href="https://www.facebook.com/elin.johansson.92351995" target="_blank"><img class="fb-link-story" src="ikoner/icons8-facebook-50.png" alt="Facebook ikon/länk till Elin Johanssons Instagramkonto"></a>
             </div>
         
             <!--Layout: Tobias-bild-->
-            <div class="photo4">
-                <img src="tobias.png" alt="bild på karaktär nr tre, Tobias">
+            <div id="foto-tobias">
+                <img src="bilder/tobias.png" alt="bild på karaktär nr tre, Tobias">
             </div>
 
             <!--Layout: Tobias-text-->
-            <div class="chapter3">
-            <h2 class="h2-storysite">Tobias Fjäll, producent</h2>
+            <div id="text-tobias">
+            <h3 class="h3-storysite">Tobias Fjäll | Producent</h3>
                 <p class="p-storysite">Min vision för filmen har verkligen kommit till liv.
                     Jag ville skapa en deckare som drog till sig de unga i samhället då den
-                    innehåller väldigt mycket dramatik och mystik. För att fånga intresset
-                    av den lite yngre målgruppen tog vi med många aspekter som de känner igen
-                    i vår fina stad, Norrköping. Detta gör att filmen kommer till liv på ett
-                    helt annat sätt! Jag och mitt team har jobbat dag och natt för att få denna
-                    vision att gå i uppfyllelse, vilket jag tycker vi absolut har lyckats med.</p>
+                    innehåller väldigt mycket dramatik och mystik, men även kultur. För att fånga
+                    den yngre målgruppens intresse tog vi med sånt som de känner igen i vår fina stad
+                    Norrköping. Detta gör att filmen kommer till liv på ett helt annat sätt! Jag och
+                    mitt team har jobbat dag och natt för att få denna ision att gå i uppfyllelse,
+                    vilket jag tycker vi absolut har lyckats med.</p>
+                    <a href="https://www.instagram.com/tobym8/" target="_blank"><img class="ig-link-story" src="ikoner/icons8-instagram.svg" alt="Instagram ikon/länk till Tobias Fjälls Instagramkonto"></a>
+                    <a href="https://www.facebook.com/tobiasfjall" target="_blank"><img class="fb-link-story" src="ikoner/icons8-facebook-50.png" alt="Facebook ikon/länk till Tobias Fjälls Instagramkonto"></a>
             </div>
         </div>
+
+        <section id="gradient-story">
+            <!--Här ligger det en gradient i css-->
+        </section>
     </main>
 
     <!--FOOTER-->
@@ -118,14 +131,14 @@
         
             <!--Liten container för logga-->
             <div class="norcopiapictures">
-                <img src="norkopiapictures.png" alt="Norcopia Pictures logotyp">
+                <img src="bilder/norkopiapictures.png" alt="Norcopia Pictures logotyp">
             </div>
             
             <!--Liten container för socials-->
             <div class="socials">
-                <img src="icons8-instagram.svg">
-                <img src="icons8-facebook-50.png">
-                <img src="icons8-twitterx-50.png">
+                <img src="ikoner/icons8-instagram.svg">
+                <img src="ikoner/icons8-facebook-50.png">
+                <img src="ikoner/icons8-twitterx-50.png">
             </div>
 
             <!--Liten container för länkar-->
