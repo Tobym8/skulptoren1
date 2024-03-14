@@ -2,7 +2,7 @@
 <html lang="sv">
 <head>
     <meta charset="UTF-8">
-    <title>Skulptören</title>
+    <title>Biljetter</title>
     <link rel="stylesheet" href="styles.css"> <!--CSS-->
     <link rel="icon" type="image/x-icon" href="ikoner/bunny_symbol-tngd46.png"> <!--Favicon-->
     <link rel="stylesheet" href="https://use.typekit.net/ytz6faf.css"> <!--Roboto typsnitt-->
@@ -40,58 +40,122 @@
         </div>
     </header>
     
-    <!--MAIN-->
-    <main class="index-main">
+    <div class="body-biljetter">
+        <div class="biljetter-container1">
+            <h2 class="rubrik-biljetter">SKULPTÖREN</h2>
+            <p class="ingress-biljetter">Boka biljetter för premiären den 21 juni 2024 kl 19:00 på GNEMA i Norrköping.</p>
+        </div>
 
-        <!--SEKTION 1 (Teaterbild och countdown)-->
-        <section id="section-one-indexsite">
-            <!--Filmtitel som rubrik-->
-            <h2 id="filmtitel">SKULPTÖREN</h2>
+        <ul class="showcase">
+            <li>
+                <div class="seat selected"></div>
+                <small>Vald plats</small>
+            </li>
+
+            <li>
+                <div class="seat occupied"></div>
+                <small>Upptagen</small>
+            </li>
+        </ul>
+
+        <div class="containerseats">
+            <div class="screen"></div>
+            <div class="row">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+            </div>
+
+            <div class="row">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+            </div>
+
+            <div class="row">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+            </div>
+
+            <div class="row">
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+            </div>
+
+            <div class="row">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+            </div>
+
+            <div class="row">
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+            </div>
+        </div>
+
+        <p class="seats-text">Du har valt <span id="count">0</span> säten</p>
+
+        <!--Fortsätt-knapp-->
+        <div class="button-biljetter">
+            <button class="button-fortsatt"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Fortsätt</a></button>
+        </div>
+
+        <h3 class="h3-priser">Priser</h3>
+
+        
+        <div class="biljettpriser">
+            <div class="p-priser-typer">
+                <p class="priser-ordinarie">Ordinarie</p>
+                <p class="priser-student">Student</p>
+                <p class="priser-pensionar">Pensionär</p>
+            </div>
             
-            <!--Countdown till premiärvisning av filmen-->
-            <div class="countdown"> 
-                <span id="nedraknare-dagar"></span>
-                <span id="nedraknare-timmar"></span>
-                <span id="nedraknare-minuter"></span>
-                <span id="nedraknare-sekunder"></span>
-
-                <!--Text "DAGAR TIMMAR MINUTER SEKUNDER"-->
-                <p id="dd">DAGAR</p>
-                <p id="tt">TIMMAR</p>
-                <p id="mm">MINUTER</p>
-                <p id="ss">SEKUNDER</p>
-            </div>
-
-            <!--Scrollknapp-->
-            <div class="scrollknapp-index">
-                <button class="button-scroll-index"><a href="#section-empty-index"><img src="ikoner/down-arrow.png" class="down-arrow-index"></a></button>
-            </div>
-        </section>
-
-        <!--Tomt element dit scrollknappen tar besökaren till-->
-        <section id="section-empty-index">
-            <div class="empty-div"></div>
-        </section>
-
-        <!--SEKTION 2 (gradient, trailer, biljettknapp)-->
-        <section id="section-two-indexsite">
-
-            <!--Filmtrailer-->
-                <div id="trailer">
-
-                    <!--Trailer-->
-                    <video controls>
-                        <source src="videos/trailer-skulptoren.mp4" type="video/mp4">
-                        Din browser stödjer inte visning av videor. <!--Står om webbläsaren ej kan visa videon-->
-                    </video>
-                    
-                    <!--Knapp som tar en till biljettköpet-->
-                    <div class="button-index">
-                        <button class="button1"><a href="biljetter.html">Till biljetter</a></button>
-                    </div>
+                <div class="p-priser-summa">
+                    <p class="priser-120kr">120.00 kr</p>
+                    <p class="priser-60kr">60.00 kr</p>
+                    <p class="priser-60kr">60.00 kr</p>
                 </div>
+            </div>
+        </div>
+
+        <section id="gradient-biljetter">
+            <!--Här ligger det en gradient i css-->
         </section>
-    </main>
+    </div>
 
     <!--FOOTER-->
     <footer>
@@ -120,12 +184,6 @@
                 </ul>
             </div>
         </div>
-
-        <!--Stor container för copyright-->
-        <div class="smallfootercontainer">
-            <p>&copy; <span class="copyright-text">Copyright 2024</span><span class="designer">Elin Johansson, Tobias Fjäll, Lova Wallin</span></p>
-        </div>
-    </footer>
 
 <!--JAVASCRIPT LÄNK-->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
