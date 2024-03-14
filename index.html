@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Skulptören</title>
     <link rel="stylesheet" href="styles.css"> <!--CSS-->
-    <link rel="icon" type="image/x-icon" href="bunny_symbol-tngd46.png"> <!--Favicon-->
+    <link rel="icon" type="image/x-icon" href="ikoner/bunny_symbol-tngd46.png"> <!--Favicon-->
     <link rel="stylesheet" href="https://use.typekit.net/ytz6faf.css"> <!--Roboto typsnitt-->
     <link rel="stylesheet" href="https://use.typekit.net/pbj6rov.css"> <!--Bebas Neue Pro typsnitt-->
     <link rel="stylesheet" href="https://use.typekit.net/vyi1wpo.css"> <!--Baskerville PT typsnitt-->
@@ -17,7 +17,7 @@
         <nav class="navbar">
             <!--Logotyp-->
             <div class="logo">
-                <li><a href="index.html"><img src="bunny_symbol-tngd46.png" alt="Skulptören logotyp"></li>
+                <li><a href="index.html"><img src="ikoner/bunny_symbol-tngd46.png" alt="Skulptören logotyp"></li>
             </div>
             <!--Relativa länkar-->
             <ul class="links">
@@ -55,22 +55,41 @@
                 <span id="nedraknare-minuter"></span>
                 <span id="nedraknare-sekunder"></span>
 
-            <!--Text "DAGAR TIMMAR MINUTER SEKUNDER"-->
-                <p>DAGAR</p>
-                <p>TIMMAR</p>
-                <p>MINUTER</p>
-                <p>SEKUNDER</p>
+                <!--Text "DAGAR TIMMAR MINUTER SEKUNDER"-->
+                <p id="dd">DAGAR</p>
+                <p id="tt">TIMMAR</p>
+                <p id="mm">MINUTER</p>
+                <p id="ss">SEKUNDER</p>
             </div>
 
-            <!--Knapp som tar en till biljettköpet-->
-            <div class="button-index">
-                <button class="button1"><a href="biljetter.html">Till biljetter</a></button>
+            <!--Scrollknapp-->
+            <div class="scrollknapp-index">
+                <button class="button-scroll-index"><a href="#section-empty-index"><img src="ikoner/down-arrow.png" class="down-arrow-index"></a></button>
             </div>
         </section>
 
-        <!--SEKTION 2 (gradient)-->
+        <!--Tomt element dit scrollknappen tar besökaren till-->
+        <section id="section-empty-index">
+            <div class="empty-div"></div>
+        </section>
+
+        <!--SEKTION 2 (gradient, trailer, biljettknapp)-->
         <section id="section-two-indexsite">
-            <!--Här ligger det en gradient i css--> 
+
+            <!--Filmtrailer-->
+                <div id="trailer">
+
+                    <!--Trailer-->
+                    <video controls>
+                        <source src="videos/trailer-skulptoren.mp4" type="video/mp4">
+                        Din browser stödjer inte visning av videor. <!--Står om webbläsaren ej kan visa videon-->
+                    </video>
+                    
+                    <!--Knapp som tar en till biljettköpet-->
+                    <div class="button-index">
+                        <button class="button1"><a href="biljetter.html">Till biljetter</a></button>
+                    </div>
+                </div>
         </section>
     </main>
 
@@ -81,14 +100,14 @@
         
             <!--Liten container för logga-->
             <div class="norcopiapictures">
-                <img src="norkopiapictures.png" alt="Norcopia Pictures logotyp">
+                <img src="bilder/norkopiapictures.png" alt="Norcopia Pictures logotyp">
             </div>
             
             <!--Liten container för socials-->
             <div class="socials">
-                <img src="icons8-instagram.svg">
-                <img src="icons8-facebook-50.png">
-                <img src="icons8-twitterx-50.png">
+                <img src="ikoner/icons8-instagram.svg">
+                <img src="ikoner/icons8-facebook-50.png">
+                <img src="ikoner/icons8-twitterx-50.png">
             </div>
 
             <!--Liten container för länkar-->
