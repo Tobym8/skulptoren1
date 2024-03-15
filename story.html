@@ -2,75 +2,82 @@
 <html lang="sv">
 <head>
     <meta charset="UTF-8">
-    <title>Story</title>
+    <title>Biljetter</title>
     <link rel="stylesheet" href="styles.css"> <!--CSS-->
     <link rel="icon" type="image/x-icon" href="ikoner/bunny_symbol-tngd46.png"> <!--Favicon-->
     <link rel="stylesheet" href="https://use.typekit.net/ytz6faf.css"> <!--Roboto typsnitt-->
     <link rel="stylesheet" href="https://use.typekit.net/pbj6rov.css"> <!--Bebas Neue Pro typsnitt-->
     <link rel="stylesheet" href="https://use.typekit.net/vyi1wpo.css"> <!--Baskerville PT typsnitt-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> <!--Vad är detta?-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"> <!--Hamburgermeny-->
 </head>
+
 <body>
     <!--HEADER-->
     <header>
-        <!--Navigation-->
+        <!--Nav-->
         <nav class="navbar">
-            <!--Logotyp-->
+            <!--Klickbar logotyp-->
             <div class="logo">
-                <li><a href="index.html"><img src="ikoner/bunny_symbol-tngd46.png" alt="Skulptören logotyp"></li>
+                <a href="index.html"><img src="ikoner/bunny_symbol-tngd46.png" alt="Skulptören logotyp, vitt kaninhuvud"></a>
             </div>
             <!--Relativa länkar-->
-            <ul class="links">
+            <ul class="nav-links">
                 <li><a href="index.html">HEM</a></li>
                 <li><a href="story.html">STORY</a></li>
                 <li><a href="biljetter.html">BILJETTER</a></li>
                 <li><a href="kontakt.html">KONTAKT</a></li>
             </ul>
-            <!--Hamburgarmeny-->
-            <div class="toggle_btn">
+            <!--Hamburgermeny för mindre skärmar-->
+            <div class="toggle-btn">
                 <i class="fa-solid fa-bars"></i>
             </div>
         </nav>
-        <!--Dropdown menu-->
-        <div class="dropdown_menu">
-            <li><a href="index.html">HEM</a></li>
-            <li><a href="story.html">STORY</a></li>
-            <li><a href="biljetter.html">BILJETTER</a></li>
-            <li><a href="kontakt.html">KONTAKT</a></li>
+
+        <!--Dropdownmeny för mindre skärmar-->
+        <div class="dropdown-menu">
+            <ul>
+                <li><a href="index.html">HEM</a></li>
+                <li><a href="story.html">STORY</a></li>
+                <li><a href="biljetter.html">BILJETTER</a></li>
+                <li><a href="kontakt.html">KONTAKT</a></li>
+            </ul>
         </div>
     </header>
+    
+    <!--MAIN-->
+    <main> 
         <!--Layout-->
         <div class="layout">
-            <!--Layout: Kanin-bild-->
+            <!--Kaninbild-->
             <div id="foto-kanin">
-                <img src="bilder/kaninmask.png" alt="Bild på en blodig kaninmask på en skulptur">
+                <img id="foto-kanin-id" src="bilder/kaninmask.png" alt="Bild på en blodig kaninmask på en skulptur">
             </div>
-            <!--Layout: Storyline-->
+
+            <!--Storyline-->
             <div class="text-storyline">
                 <h2 class="h2-storysite">Storyline</h2>
                     <p id="info-om-film"><span class="bold">Åldersgräns:</span> Från 15 år<br><span class="bold">Speltid:</span> 1 tim 55 min<br><span class="bold">Genre:</span> Thriller, Deckare, Skräck</p>
-                        <p class="p-storysite">Walter och hans kompisar från universitetet är på studentsittning på Arbisteatern i Norrköping.
-                        När kvällens första framträdande ska börja och ridån dras upp fylls salen med öronbedövande skrik.
-                        På scenen hänger en livlös kvinna i trådar likt en marionettdocka. Detta är det tredje mordoffret 
-                        som hittats vid en kulturell plats Norrköping under hösten 2024. Filmen följer kriminaldetektiv
-                        Caroline Hällström, hennes kollega Annika och hennes son Walter som tillsammans i en kamp mot klockan försöker fånga
-                        seriemördaren innan nästa mord begås.</p>
+                    <p class="p-storysite">Walter och hans kompisar från universitetet är på studentsittning på Arbisteatern i Norrköping.
+                    När kvällens första framträdande ska börja och ridån dras upp fylls salen med öronbedövande skrik.
+                    På scenen hänger en livlös kvinna i trådar likt en marionettdocka. Detta är det tredje mordoffret 
+                    som hittats vid en kulturell plats Norrköping under hösten 2024. Filmen följer kriminaldetektiv
+                    Caroline Hällström, hennes kollega Annika och hennes son Walter som tillsammans i en kamp mot klockan försöker fånga
+                    seriemördaren innan nästa mord begås.</p>
             </div>
-     
+
             <!--Scrollknapp-->
             <div class="scrollknapp-story">
-                <button class="button-scroll-story"><a href="#section-empty-story"><img src="ikoner/down-arrow-story.png" class="down-arrow-story"></a></button>
+                <a href="#text-lova" class="button-scroll-story">
+                    <img src="ikoner/down-arrow-story.png" class="down-arrow-story" alt="Ljusgrå nedåtpil">
+                </a>
             </div>
 
-            <section id="section-empty-story">
-                <div class="empty-div"></div>
-            </section>
-
-            <!--Layout: Lova-bild-->
+            <!--Bild på Lova-->
             <div id="foto-lova">
-                <img src="bilder/lova.png" alt="bild på karakär nr ett, Lova">
+                <img id="foto-lova-id" src="bilder/lova.png" alt="bild på karakär nr ett, Lova">
             </div>
-            <!--Layout: Lova-text-->
+
+            <!--Text om Lova-->
             <div id="text-lova">
                 <h3 class="h3-storysite">Lova Wallin | Manusförfattare</h3>
                     <p class="p-storysite">Idén till filmen kom från det bristande utbudet på
@@ -80,34 +87,36 @@
                         Walter, som unga kan känna igen sig i. Jag ville att de skulle kunna
                         relatera till honom och jobbade därför mycket med hur just han skulle
                         porträtteras genom manuset.</p>
-                        <a href="https://www.instagram.com/lovaawallin" target="_blank"><img class="ig-link-story" src="ikoner/icons8-instagram.svg" alt="Instagram ikon/länk till Lova Wallins Instagramkonto"></a>
-                        <a href="https://www.facebook.com/lova.wallin.7" target="_blank"><img class="fb-link-story" src="ikoner/icons8-facebook-50.png" alt="Facebook ikon/länk till Lova Wallins Instagramkonto"></a>
-            </div>
-        
-            <!--Layout: Elin-bild-->
-            <div id="foto-elin">
-                <img src="bilder/elin.png" alt="bild på karaktär nr två, Elin">
+                    <!--Länkar till Lovas sociala medier-->
+                    <a href="https://www.instagram.com/lovaawallin" target="_blank"><img class="ig-link-story" src="ikoner/icons8-instagram.svg" alt="Instagram ikon/länk till Lova Wallins Instagramkonto"></a>
+                    <a href="https://www.facebook.com/lova.wallin.7" target="_blank"><img class="fb-link-story" src="ikoner/icons8-facebook-50.png" alt="Facebook ikon/länk till Lova Wallins Instagramkonto"></a>
             </div>
 
-            <!--Layout: Elin-text-->
+            <!--Bild på Elin-->
+            <div id="foto-elin">
+                <img id="foto-elin-id" src="bilder/elin.png" alt="bild på karaktär nr två, Elin">
+            </div>
+
+            <!--Text om Elin-->
             <div id="text-elin">
-            <h3 class="h3-storysite">Elin Johansson | Regissör</h3>
-                <p class="p-storysite">Jag ville fånga den autentiska känslan av Norrköpings
-                    fina byggnader och platser och att de som kommer från Norrköping skulle känna igen
-                    sig och se sig själva i karaktärerna. Jag arbetade därför väldigt
-                    tätt med skådespelarna för att förmedla detta och tycker verkligen att vi lyckades.
-                    Det är en dramatisk deckare som fortfarande är fartfylld med många intriger. Jag är
-                    verkligen exalterad för premiären.</p>
+                <h3 class="h3-storysite">Elin Johansson | Regissör</h3>
+                    <p class="p-storysite">Jag ville fånga den autentiska känslan av Norrköpings
+                        fina byggnader och platser och att de som kommer från Norrköping skulle känna igen
+                        sig och se sig själva i karaktärerna. Jag arbetade därför väldigt
+                        tätt med skådespelarna för att förmedla detta och tycker verkligen att vi lyckades.
+                        Det är en dramatisk deckare som fortfarande är fartfylld med många intriger. Jag är
+                        verkligen exalterad för premiären.</p>
+                    <!--Länkar till Elins sociala medier-->
                     <a href="https://www.instagram.com/johanssonelin_/" target="_blank"><img class="ig-link-story" src="ikoner/icons8-instagram.svg" alt="Instagram ikon/länk till Elin Johanssons Instagramkonto"></a>
                     <a href="https://www.facebook.com/elin.johansson.92351995" target="_blank"><img class="fb-link-story" src="ikoner/icons8-facebook-50.png" alt="Facebook ikon/länk till Elin Johanssons Instagramkonto"></a>
             </div>
-       
-            <!--Layout: Tobias-bild-->
+        
+            <!--Bild på Tobias-->
             <div id="foto-tobias">
-                <img src="bilder/tobias.png" alt="bild på karaktär nr tre, Tobias">
+                <img id="foto-tobias-id" src="bilder/tobias.png" alt="bild på karaktär nr tre, Tobias">
             </div>
 
-            <!--Layout: Tobias-text-->
+            <!--Text om Tobias-->
             <div id="text-tobias">
             <h3 class="h3-storysite">Tobias Fjäll | Producent</h3>
                 <p class="p-storysite">Min vision för filmen har verkligen kommit till liv.
@@ -117,31 +126,22 @@
                     Norrköping. Detta gör att filmen kommer till liv på ett helt annat sätt! Jag och
                     mitt team har jobbat dag och natt för att få denna ision att gå i uppfyllelse,
                     vilket jag tycker vi absolut har lyckats med.</p>
-                    <a href="https://www.instagram.com/tobym8/" target="_blank"><img class="ig-link-story" src="ikoner/icons8-instagram.svg" alt="Instagram ikon/länk till Tobias Fjälls Instagramkonto"></a>
-                    <a href="https://www.facebook.com/tobiasfjall" target="_blank"><img class="fb-link-story" src="ikoner/icons8-facebook-50.png" alt="Facebook ikon/länk till Tobias Fjälls Instagramkonto"></a>
+                <!--Länkar till Tobias sociala medier-->
+                <a href="https://www.instagram.com/tobym8/" target="_blank"><img class="ig-link-story" src="ikoner/icons8-instagram.svg" alt="Instagram ikon/länk till Tobias Fjälls Instagramkonto"></a>
+                <a href="https://www.facebook.com/tobiasfjall" target="_blank"><img class="fb-link-story" src="ikoner/icons8-facebook-50.png" alt="Facebook ikon/länk till Tobias Fjälls Instagramkonto"></a>
             </div>
         </div>
 
-        <section id="gradient-story">
+        <!--SEKTION GRADIENT-->
+        <section id="section-gradient-story">
             <!--Här ligger det en gradient i css-->
         </section>
+    </main>
 
     <!--FOOTER-->
     <footer>
         <!--Stor container för socials + länkar-->
         <div class="bigfootercontainer">
-        
-            <!--Liten container för logga-->
-            <div class="norcopiapictures">
-                <img src="bilder/norkopiapictures.png" alt="Norcopia Pictures logotyp">
-            </div>
-            
-            <!--Liten container för socials-->
-            <div class="socials">
-                <img src="ikoner/icons8-instagram.svg">
-                <img src="ikoner/icons8-facebook-50.png">
-                <img src="ikoner/icons8-twitterx-50.png">
-            </div>
 
             <!--Liten container för länkar-->
             <div class="footernav">
@@ -152,11 +152,11 @@
                     <li><a href="kontakt.html">KONTAKT</a></li>
                 </ul>
             </div>
-        </div>
 
-        <!--Stor container för copyright-->
-        <div class="smallfootercontainer">
-            <p>&copy; <span class="copyright-text">Copyright 2024</span><span class="designer">Elin Johansson, Tobias Fjäll, Lova Wallin</span></p>
+            <!--Liten container för copyright-->
+            <div class="copyright">
+                <p><span class="copyright-text">&copy; Copyright 2024</span><span class="designer">Elin Johansson, Tobias Fjäll, Lova Wallin</span></p>
+            </div>
         </div>
     </footer>
 
@@ -165,4 +165,5 @@
 <script src="script.js"></script>
 
 </body>
+
 </html>
